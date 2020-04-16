@@ -6,6 +6,7 @@
 .shape:before,
 .shape:after {
     position: absolute;
+    margin: 30px;
     content: "";
     left: 50px;
     top: 0;
@@ -15,9 +16,24 @@
     border-radius: 50px 50px 0 0;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
+    /* animation: beat 3s infinite; */
 }
 .shape:after {
     left: 0;
     transform: rotate(45deg);
     transform-origin: 100% 100%;
+   
+} 
+
+.shape{
+    animation: beat 3s linear infinite;
 }
+
+@keyframes beat {
+    0%{
+        transform: scale(0,0);
+    }
+    100%{
+        transform: scale(1.5,1.5);
+    }
+     };
